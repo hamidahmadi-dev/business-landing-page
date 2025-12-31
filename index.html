@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightFix Plumbing | Fast & Reliable Local Service</title>
+  <meta name="description" content="Fast, reliable plumbing services. Emergency call-outs, repairs, and installations. Get a free quote today." />
+  <style>
+    :root{
+      --bg:#071427;
+      --card:rgba(255,255,255,.07);
+      --line:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.88);
+      --muted:rgba(255,255,255,.65);
+      --brand:#2dd4bf;
+      --brand2:#60a5fa;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(900px 500px at 20% 10%, rgba(96,165,250,.25), transparent 55%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(45,212,191,.22), transparent 55%),
+                  linear-gradient(180deg, #041024, #020814);
+      color:var(--text);
+      min-height:100vh;
+    }
+    a{color:inherit}
+    .wrap{max-width:1060px;margin:0 auto;padding:22px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;padding:12px 14px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(0,0,0,.12);backdrop-filter: blur(10px);
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+    .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+    .nav a{font-size:14px;text-decoration:none;color:var(--muted)}
+    .nav a:hover{color:var(--text)}
+    .hero{
+      margin-top:18px;
+      display:grid;grid-template-columns: 1.25fr .9fr;gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero-left{padding:28px}
+    h1{margin:0 0 10px;font-size:42px;line-height:1.1}
+    .lead{margin:0 0 16px;color:var(--muted);font-size:16px;line-height:1.7}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
+    .badge{
+      font-size:13px;color:rgba(255,255,255,.8);
+      border:1px solid var(--line);padding:8px 10px;border-radius:999px;
+      background:rgba(0,0,0,.12)
+    }
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .btn{
+      border:none;cursor:pointer;text-decoration:none;
+      padding:12px 14px;border-radius:14px;font-weight:700;font-size:14px;
+      display:inline-flex;align-items:center;gap:8px;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#041024;
+    }
+    .btn-ghost{
+      background:rgba(0,0,0,.18);
+      border:1px solid var(--line);
+      color:var(--text);
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
+    .mini{
+      padding:16px;border-radius:18px;background:rgba(0,0,0,.18);
+      border:1px solid var(--line)
+    }
+    .mini h3{margin:0 0 6px;font-size:15px}
+    .mini p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .grid{
+      margin-top:18px;
+      display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+    }
+    .feature{padding:16px}
+    .feature h3{margin:0 0 6px;font-size:16px}
+    .feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .split{
+      margin-top:18px;
+      display:grid;grid-template-columns:1fr 1fr;gap:14px;
+    }
+    .section{padding:18px}
+    .section h2{margin:0 0 10px;font-size:18px}
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9;font-size:14px}
+    .form{
+      display:grid;gap:10px;margin-top:10px
+    }
+    input, textarea{
+      width:100%;
+      padding:12px 12px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(0,0,0,.18);color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .small{font-size:12px;color:var(--muted);margin-top:10px}
+    .footer{
+      margin:18px 0 10px;
+      text-align:center;color:rgba(255,255,255,.55);font-size:12px;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .grid{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand"><span class="dot"></span> BrightFix Plumbing</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card hero-left">
+        <h1>Fast, reliable plumbing in your area</h1>
+        <p class="lead">
+          Same-day call-outs, fair pricing, and clean work. From leaks and blocked drains
+          to new fittings, we get it done without drama.
+        </p>
+
+        <div class="badges">
+          <span class="badge">✅ Same-day appointments</span>
+          <span class="badge">✅ Clear pricing</span>
+          <span class="badge">✅ Emergency call-outs</span>
+          <span class="badge">✅ Friendly local service</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Get a free quote</a>
+          <a class="btn btn-ghost" href="tel:+447000000000">Call: +44 7000 000000</a>
+          <a class="btn btn-ghost" href="mailto:hello@brightfix.uk">Email us</a>
+        </div>
+
+        <div class="small">Tip: Replace the phone/email with the real business contact.</div>
+      </div>
+
+      <div class="card hero-right">
+        <div class="mini">
+          <h3>Response time</h3>
+          <p>We typically reply in under 30 minutes during working hours.</p>
+        </div>
+        <div class="mini">
+          <h3>Service area</h3>
+          <p>Local coverage. Add your city/area here (e.g., London, Manchester, Birmingham).</p>
+        </div>
+        <div class="mini">
+          <h3>Trusted work</h3>
+          <p>Clean finish, clear communication, and no surprise costs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" id="services">
+      <div class="card feature">
+        <h3>Emergency repairs</h3>
+        <p>Leaks, bursts, and urgent fixes. We keep it simple and fast.</p>
+      </div>
+      <div class="card feature">
+        <h3>Installations</h3>
+        <p>Taps, toilets, showers, and fittings installed properly, first time.</p>
+      </div>
+      <div class="card feature">
+        <h3>Blocked drains</h3>
+        <p>Unclogging and drainage checks to stop repeat problems.</p>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="card section" id="pricing">
+        <h2>Simple pricing</h2>
+        <ul>
+          <li>Call-out (from): £60</li>
+          <li>Standard repair (from): £90</li>
+          <li>Installation (from): £120</li>
+          <li>Emergency (from): £140</li>
+        </ul>
+        <p class="small">Pricing is an example. Set real prices or write “Quote on request”.</p>
+      </div>
+
+      <div class="card section" id="contact">
+        <h2>Get a quote</h2>
+        <form class="form" onsubmit="event.preventDefault(); alert('Thanks! This is a demo. Connect this form to email or WhatsApp.');">
+          <input type="text" placeholder="Your name" required />
+          <input type="tel" placeholder="Phone number" required />
+          <textarea placeholder="What do you need help with?" required></textarea>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+        <p class="small">This is a demo form. For real use, connect it to email/WhatsApp or a form service.</p>
+      </div>
+    </div>
+
+    <div class="footer">© 2025 BrightFix Plumbing. Demo landing page.</div>
+  </div>
+</body>
+</html>
