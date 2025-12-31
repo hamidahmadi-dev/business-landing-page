@@ -1,214 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BrightFix Plumbing | Fast & Reliable Local Service</title>
-  <meta name="description" content="Fast, reliable plumbing services. Emergency call-outs, repairs, and installations. Get a free quote today." />
+  <title>Hamid Ahmadi | Web Developer</title>
+
   <style>
-    :root{
-      --bg:#071427;
-      --card:rgba(255,255,255,.07);
-      --line:rgba(255,255,255,.12);
-      --text:rgba(255,255,255,.88);
-      --muted:rgba(255,255,255,.65);
-      --brand:#2dd4bf;
-      --brand2:#60a5fa;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius:22px;
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(900px 500px at 20% 10%, rgba(96,165,250,.25), transparent 55%),
-                  radial-gradient(900px 500px at 80% 20%, rgba(45,212,191,.22), transparent 55%),
-                  linear-gradient(180deg, #041024, #020814);
-      color:var(--text);
-      min-height:100vh;
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #0b1b3a, #020617);
+      color: #e5e7eb;
     }
-    a{color:inherit}
-    .wrap{max-width:1060px;margin:0 auto;padding:22px}
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:14px;padding:12px 14px;border:1px solid var(--line);
-      border-radius:999px;background:rgba(0,0,0,.12);backdrop-filter: blur(10px);
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
-    .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2))}
-    .nav a{font-size:14px;text-decoration:none;color:var(--muted)}
-    .nav a:hover{color:var(--text)}
-    .hero{
-      margin-top:18px;
-      display:grid;grid-template-columns: 1.25fr .9fr;gap:18px;
-      align-items:stretch;
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 20px;
+      padding: 40px 28px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
     }
-    .hero-left{padding:28px}
-    h1{margin:0 0 10px;font-size:42px;line-height:1.1}
-    .lead{margin:0 0 16px;color:var(--muted);font-size:16px;line-height:1.7}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
-    .badge{
-      font-size:13px;color:rgba(255,255,255,.8);
-      border:1px solid var(--line);padding:8px 10px;border-radius:999px;
-      background:rgba(0,0,0,.12)
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
     }
-    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-    .btn{
-      border:none;cursor:pointer;text-decoration:none;
-      padding:12px 14px;border-radius:14px;font-weight:700;font-size:14px;
-      display:inline-flex;align-items:center;gap:8px;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 10px 0 6px;
+      color: #93c5fd;
     }
-    .btn-primary{
-      background:linear-gradient(135deg,var(--brand),var(--brand2));
-      color:#041024;
+
+    .stack {
+      margin-bottom: 18px;
+      font-size: 14px;
+      color: #cbd5f5;
     }
-    .btn-ghost{
-      background:rgba(0,0,0,.18);
-      border:1px solid var(--line);
-      color:var(--text);
+
+    .bio {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      color: #e5e7eb;
     }
-    .btn:hover{transform:translateY(-1px)}
-    .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
-    .mini{
-      padding:16px;border-radius:18px;background:rgba(0,0,0,.18);
-      border:1px solid var(--line)
+
+    .location {
+      font-size: 14px;
+      margin-bottom: 22px;
+      color: #9ca3af;
     }
-    .mini h3{margin:0 0 6px;font-size:15px}
-    .mini p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-    .grid{
-      margin-top:18px;
-      display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .feature{padding:16px}
-    .feature h3{margin:0 0 6px;font-size:16px}
-    .feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-    .split{
-      margin-top:18px;
-      display:grid;grid-template-columns:1fr 1fr;gap:14px;
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      min-width: 120px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
-    .section{padding:18px}
-    .section h2{margin:0 0 10px;font-size:18px}
-    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9;font-size:14px}
-    .form{
-      display:grid;gap:10px;margin-top:10px
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
-    input, textarea{
-      width:100%;
-      padding:12px 12px;border-radius:14px;border:1px solid var(--line);
-      background:rgba(0,0,0,.18);color:var(--text);
-      outline:none;
+
+    .whatsapp {
+      background: #166534;
     }
-    textarea{min-height:110px;resize:vertical}
-    .small{font-size:12px;color:var(--muted);margin-top:10px}
-    .footer{
-      margin:18px 0 10px;
-      text-align:center;color:rgba(255,255,255,.55);font-size:12px;
+
+    .email {
+      background: #1e3a8a;
     }
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr}
-      h1{font-size:36px}
-      .grid{grid-template-columns:1fr}
-      .split{grid-template-columns:1fr}
+
+    .projects-btn {
+      margin-top: 8px;
+      background: #020617;
+      border: 1px solid #1e293b;
+    }
+
+    .section {
+      margin-top: 28px;
+      text-align: left;
+    }
+
+    .section h3 {
+      margin-bottom: 14px;
+      font-size: 20px;
+      color: #93c5fd;
+    }
+
+    .project {
+      background: rgba(2, 6, 23, 0.7);
+      padding: 16px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      border: 1px solid #1e293b;
+    }
+
+    .project h4 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    .project p {
+      font-size: 14px;
+      color: #d1d5db;
+      line-height: 1.5;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <div class="brand"><span class="dot"></span> BrightFix Plumbing</div>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
+  <div class="container">
+    <div class="card">
+
+      <h1>Hamid Ahmadi</h1>
+      <h2>Junior Web Developer</h2>
+
+      <div class="stack">HTML • CSS • JavaScript</div>
+
+      <div class="bio">
+        I help local businesses get more customers with fast, mobile-friendly landing pages.
+        <br><br>
+        Perfect for plumbers, electricians, cleaners, and other local services.
+        I build clean, responsive websites and simple JavaScript features that turn visitors into calls.
       </div>
-    </div>
 
-    <div class="hero">
-      <div class="card hero-left">
-        <h1>Fast, reliable plumbing in your area</h1>
-        <p class="lead">
-          Same-day call-outs, fair pricing, and clean work. From leaks and blocked drains
-          to new fittings, we get it done without drama.
-        </p>
+      <div class="location">
+        Based in the UK · Available for freelance & junior roles<br>
+        Affordable pricing · Fast delivery
+      </div>
 
-        <div class="badges">
-          <span class="badge">✅ Same-day appointments</span>
-          <span class="badge">✅ Clear pricing</span>
-          <span class="badge">✅ Emergency call-outs</span>
-          <span class="badge">✅ Friendly local service</span>
+      <div class="buttons">
+        <a class="btn whatsapp" href="https://wa.me/447707546682" target="_blank">
+          WhatsApp
+        </a>
+        <a class="btn email" href="mailto:hamidrezaahmadiuk@gmail.com">
+          Email
+        </a>
+      </div>
+
+      <a class="btn projects-btn" href="#projects">Projects</a>
+
+      <!-- Projects -->
+      <div class="section" id="projects">
+        <h3>Projects</h3>
+
+        <div class="project">
+          <h4>Business Landing Page</h4>
+          <p>
+            A modern, high-converting landing page for local businesses.
+            Includes hero section, services, pricing, and contact form.
+            Fully responsive and optimised for mobile users.
+          </p>
         </div>
 
-        <div class="cta">
-          <a class="btn btn-primary" href="#contact">Get a free quote</a>
-          <a class="btn btn-ghost" href="tel:+447000000000">Call: +44 7000 000000</a>
-          <a class="btn btn-ghost" href="mailto:hello@brightfix.uk">Email us</a>
+        <div class="project">
+          <h4>To-Do App (JavaScript)</h4>
+          <p>
+            A simple JavaScript to-do app with add, complete, delete, and clear features.
+            Clean UI and beginner-friendly code structure.
+          </p>
         </div>
 
-        <div class="small">Tip: Replace the phone/email with the real business contact.</div>
-      </div>
-
-      <div class="card hero-right">
-        <div class="mini">
-          <h3>Response time</h3>
-          <p>We typically reply in under 30 minutes during working hours.</p>
-        </div>
-        <div class="mini">
-          <h3>Service area</h3>
-          <p>Local coverage. Add your city/area here (e.g., London, Manchester, Birmingham).</p>
-        </div>
-        <div class="mini">
-          <h3>Trusted work</h3>
-          <p>Clean finish, clear communication, and no surprise costs.</p>
+        <div class="project">
+          <h4>Portfolio Card</h4>
+          <p>
+            A clean responsive profile card with contact buttons and a projects section.
+            Designed to work well on mobile devices.
+          </p>
         </div>
       </div>
-    </div>
 
-    <div class="grid" id="services">
-      <div class="card feature">
-        <h3>Emergency repairs</h3>
-        <p>Leaks, bursts, and urgent fixes. We keep it simple and fast.</p>
-      </div>
-      <div class="card feature">
-        <h3>Installations</h3>
-        <p>Taps, toilets, showers, and fittings installed properly, first time.</p>
-      </div>
-      <div class="card feature">
-        <h3>Blocked drains</h3>
-        <p>Unclogging and drainage checks to stop repeat problems.</p>
-      </div>
-    </div>
-
-    <div class="split">
-      <div class="card section" id="pricing">
-        <h2>Simple pricing</h2>
+      <!-- What I can build -->
+      <div class="section">
+        <h3>What I can build</h3>
         <ul>
-          <li>Call-out (from): £60</li>
-          <li>Standard repair (from): £90</li>
-          <li>Installation (from): £120</li>
-          <li>Emergency (from): £140</li>
+          <li>Landing pages for local businesses</li>
+          <li>Simple websites (Home / About / Contact)</li>
+          <li>Small JavaScript features (forms, UI, validation)</li>
+          <li>Mobile-friendly responsive layouts</li>
         </ul>
-        <p class="small">Pricing is an example. Set real prices or write “Quote on request”.</p>
       </div>
 
-      <div class="card section" id="contact">
-        <h2>Get a quote</h2>
-        <form class="form" onsubmit="event.preventDefault(); alert('Thanks! This is a demo. Connect this form to email or WhatsApp.');">
-          <input type="text" placeholder="Your name" required />
-          <input type="tel" placeholder="Phone number" required />
-          <textarea placeholder="What do you need help with?" required></textarea>
-          <button class="btn btn-primary" type="submit">Send message</button>
-        </form>
-        <p class="small">This is a demo form. For real use, connect it to email/WhatsApp or a form service.</p>
-      </div>
+      <footer>
+        © 2025 Hamid Ahmadi
+      </footer>
+
     </div>
-
-    <div class="footer">© 2025 BrightFix Plumbing. Demo landing page.</div>
   </div>
 </body>
 </html>
